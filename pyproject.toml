@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gridflex-dispatch"
+version = "0.1.0"
+description = "Dependency-free convex battery dispatch for renewable microgrids"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Sunzzx"}]
+classifiers = ["Development Status :: 3 - Alpha", "License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3", "Topic :: Scientific/Engineering"]
+
+[project.scripts]
+gridflex-demo = "gridflex.demo:main"
+
+[tool.setuptools.packages.find]
+include = ["gridflex*"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]

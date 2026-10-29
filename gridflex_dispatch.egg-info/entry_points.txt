@@ -1,0 +1,2 @@
+[console_scripts]
+gridflex-demo = gridflex.demo:main
